@@ -1,5 +1,5 @@
 alert("mensaje de alerta");
-var x = 1;
+var x = 2;
 x++;
 alert("vaariable  " + x);
 x++;
