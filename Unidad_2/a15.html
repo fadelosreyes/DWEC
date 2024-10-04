@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x = prompt("introduce una frase");
+        var tamaño = x.length;
+        var res = [];
+
+        for (let i = 0; i < tamaño; i++) {
+            if (isNaN(x[i]) || x[i] === ' ') {
+                res.push(x[i]);
+            }
+        }
+        document.write(res);
+    </script>
+</body>
+</html>
