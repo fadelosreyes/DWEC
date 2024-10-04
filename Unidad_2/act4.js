@@ -1,0 +1,1 @@
+document.write("Bienvenido al mundo del  Javascript");

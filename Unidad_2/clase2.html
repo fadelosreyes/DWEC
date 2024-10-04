@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <!--pregunta usuario palabra o 
+    frase y luego numero y 
+    le decimos q palabra o caracter hay en la posicion
+    y q el numero este dentro del intervalo de caracteres
+    si se equivoca decir entre q tiene q estar el valor-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pedir_palabra() {
+            x = prompt("dame una cadena: ");
+            if (x == "") {
+                alert("Escribe una cadena que no sea vacia");
+                pedir_palabra();
+            } 
+        }
+
+        function pedir_numero() {
+            c = parseInt(prompt("dime un numero: "));
+            s = x.length - 1;
+            if (c == "" || isNaN(c)) {
+                alert("escriba un numero");
+                pedir_numero();
+            }
+            if (!isNaN(c) || c == "") {
+                if (c > s || c < 0) {
+                    alert("el número debe de estar entre 0 y " + s);
+                    pedir_numero();
+                }  
+            }
+        }
+
+        function iniciarPrograma() {
+            pedir_palabra();
+            pedir_numero();
+            document.write("El elemento en la posición " + c + " es " + x[c] + "<br>");  
+            document.write("el elemento escrita es: "+ x);
+
+        }
+
+        iniciarPrograma();
+    </script>
+</body>
+</html>

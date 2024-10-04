@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        n1 = parseInt(prompt("dime un numero"));
+        n2 = parseInt(prompt("dime un numero"));
+        res = [];
+        min = Math.min(n1, n2);// coje el numero mas pequeño
+        max = Math.max(n1, n2);// coje el numero mas grande 
+        for (let i = min; i <= max; i++) {
+            if (i % 8 === 0) {
+                res.push(i);//se añade al array vacio el multiplo de 8
+            }
+        }
+        document.write(res);
+    </script>
+</body>
+</html>
