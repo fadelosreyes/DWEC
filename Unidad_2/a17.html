@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function menu() {
+            var opciones = prompt('Calculadora\n 1 sumar\n 2 restar\n 3 multiplicar\n 4 dividir\n 5 modulo\n 6 salir');
+            if (opciones === '6') {
+                confirm('quieres salir?') 
+                if (true) {
+                    window.close()
+                } else
+                menu()
+            }
+            calcular(opciones);
+        }
+
+        function calcular(opciones) {
+            var x = parseFloat(prompt('primer operando'));
+            var y = parseFloat(prompt('segundo operando'));
+            var res;
+            switch (opciones) {
+            case '1':
+                res = x + y;
+                break;
+            case '2':
+                res = x - y;
+                break;
+            case '3':
+                res = x * y;
+                break;
+            case '4':
+                res = x / y;
+                break;
+            case '5':
+                res = x % y;
+                break;
+            }
+
+            document.write(res);
+        }
+
+        menu();
+    </script>
+</body>
+</html>

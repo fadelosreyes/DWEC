@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var valores = [true, 5, false, "hola", "adios", 2];
+        res_suma =  0;
+        res_multiplicar = 1;
+        res_palabra = "";
+        boleano = null;
+        boleano_true = null;
+        boleano_false = null;
+        res1 = null;
+        res2 = null;
+        for (let i = 0; i < valores.length; i++) {
+            if (typeof(valores[i]) == "number") {
+                res_suma += valores[i];
+                res_multiplicar *= valores[i];
+            }
+            if (typeof(valores[i]) == "string") {
+                if (valores[i].length > res_palabra.length) {
+                    res_palabra = valores[i];
+                }
+            }
+            if (typeof(valores[i]) == "boolean") {
+                if (valores[i]) {
+                    boleano_true  = valores[i];
+                } else 
+                    boleano_false = valores[i]
+            }    
+        }
+        res2 = boleano_false || boleano_true;
+        res1 = boleano_false && boleano_true;
+
+        document.write("el resultado de la suma es: " + res_suma + "<br>");
+        document.write("el resultado de la resta es: " + res_multiplicar + "<br>");
+        document.write("la palabra mas grande es: " + res_palabra + "<br>");
+        document.write("el resultado de true && false: " + res1 + "<br>");
+        document.write("el resultado de true || false: " + res2 + "<br>");
+    </script>
+</body>
+</html>
