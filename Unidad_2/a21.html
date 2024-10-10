@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+       function menu() {
+           var opciones = prompt('Conversor\n 1 a numero\n 2 a cadena\n 3 a booleano\n 4 a objeto\n 5 a array');
+           calcular(opciones);
+       }
+
+
+       function calcular(opciones) {
+           var x = prompt('Que quieres convertir? ');
+           var res;
+           switch (opciones) {
+           case '1':
+               res = Number(x);
+               break;
+           case '2':
+               res = String(x);
+               break;
+           case '3':
+               res = Boolean(x);
+               break;
+           case '4':
+               res = Object(x);
+               break;
+           case '5':
+               res = Array.from(x);
+               break;
+           }
+
+
+           document.write(res);
+       }
+
+
+       menu();
+   </script>
+</body>
+</html>
+   </script>
+</body>
+</html>

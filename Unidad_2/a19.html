@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function pedirContraseña() {
+            var contraseñaGuardada = '1234';
+        var registro = prompt('Escriba su contraseña');
+        if (registro === contraseñaGuardada) {
+            document.write('Su contraseña es correcta')
+        } else {
+            alert('Su contraseña es incorrecta')
+            pedirContraseña()
+            }
+        }
+        pedirContraseña()
+    </script>
+</body>
+</html>

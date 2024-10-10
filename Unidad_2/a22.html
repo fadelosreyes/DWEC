@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="opciones">Selecciona una habitación:</label>
+    <select id="habitaciones" name="habitaciones">
+        <option value="galeria">galeria</option>
+        <option value="salon de baile">salon de baile</option>
+        <option value="sala de billar">sala de billar</option>
+        <option value="comedor">comedor</option>
+    </select>
+    <br>
+    <label for="opciones2">Selecciona un sospechoso:</label>
+    <select id="sospechosos" name="sospechoso">
+        <option value="Sr parker">Sr parker</option>
+        <option value="Sr Van Cleve">Sr Van Cleve</option>
+        <option value="Sra Sparr">Sra Sparr</option>
+        <option value="Sr Kalehoff">Sr Kalehoff</option>
+    </select>
+    <br>
+    <button type="button" onclick="comprobar()">Comprobar</button>
+
+    <script type="text/javascript">
+        function comprobar() {
+        var sospechoso = document.getElementById('sospechosos').value;
+        var habitacion = document.getElementById('habitaciones').value;
+        var room = 'sala de billar';
+        var asesino = 'Sra Sparr';
+        var arma;
+
+        if (habitacion == 'galeria') {
+            arma = 'trofeo'
+        } else if (habitacion == 'salon de baile') {
+            arma = 'veneno'
+        } else if (habitacion == 'sala de billar') {
+            arma = 'palo de billar'
+        } else if (habitacion == 'comedor') {
+            arma = 'cuchillo'
+        }  
+        
+        if (sospechoso == asesino && habitacion == room) {
+            document.write(asesino + ' lo hizo en el ' + room + ' con el ' + arma)
+        } else if (sospechoso == asesino && habitacion != room) {
+            document.write('el sospechoso es correcto pero la habitacion no')
+        } else if (sospechoso != asesino && habitacion == room) {
+            document.write('el sospechoso es incorrecto pero la habitacion es correcta')
+        } else {
+            document.write('ninguna de las dos es correcta')
+        }
+        }
+    </script>
+</body>
+</html>
