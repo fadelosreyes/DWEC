@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrón de Asteriscos</title>
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Patrón de Asteriscos</title>
+    </head>
+    <body>
 
-    <pre id="patron"></pre>
+        <pre id="patron"></pre>
 
-    <script type="text/javascript">
-        var patron = '';
-        var numFilas = 4; 
-        for (var i = 1; i <= numFilas; i++) {
-            for (var j = 1; j <= numFilas - i; j++) {
-                patron += ' ';
+        <script type="text/javascript">
+            var patron = '';
+            var numFilas = 4; 
+            for (var i = 1; i <= numFilas; i++) {
+                for (var j = 1; j <= numFilas - i; j++) {
+                    patron += ' ';
+                }
+                for (var k = 1; k <= (2 * i - 1); k++) {
+                    patron += '*';
+                }
+                patron += '\n'; 
             }
-            for (var k = 1; k <= (2 * i - 1); k++) {
-                patron += '*';
-            }
-            patron += '\n'; 
-        }
 
-        for (var i = numFilas - 1; i >= 1; i--) {
-            for (var j = 1; j <= numFilas - i; j++) {
-                patron += ' ';
+            for (var i = numFilas - 1; i >= 1; i--) {
+                for (var j = 1; j <= numFilas - i; j++) {
+                    patron += ' ';
+                }
+                for (var k = 1; k <= (2 * i - 1); k++) {
+                    patron += '*';
+                }
+                patron += '\n'; 
             }
-            for (var k = 1; k <= (2 * i - 1); k++) {
-                patron += '*';
-            }
-            patron += '\n'; 
-        }
 
-        document.getElementById('patron').innerText = patron; // Mostrar el patrón en la página
-    </script>
-</body>
-</html>
+            document.getElementById('patron').innerText = patron; // Mostrar el patrón en la página
+        </script>
+    </body>
+    </html>
