@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj en Tiempo Real</title>
+</head>
+<body>
+    <h3>Hora Actual:</h3>
+    <p id="reloj"></p>
+
+    <script type="text/javascript">
+        function mostrarReloj() {
+            var f1 = new Date();
+            var hora = f1.getHours();
+            var minuto = String(f1.getMinutes()).padStart(2, '0');
+            var segundo = String(f1.getSeconds()).padStart(2, '0');
+            var periodo = hora >= 12 ? "PM" : "AM"; 
+            hora = hora % 12 || 12;
+            document.getElementById("reloj").innerHTML = hora + ":" + minuto + ":" + segundo + " " + periodo;
+        }
+
+        setInterval(mostrarReloj, 1000);
+        mostrarReloj();
+    </script>
+</body>
+</html>

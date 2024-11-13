@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Hora</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var fecha = prompt("Dame la hora ");
+        var regex = /^([01][0-9]|2[0-3]):([0-5][0-9])(:[0-5][0-9])?$/;
+        var comprobar = fecha.match(regex);
+        if (comprobar) {
+            document.write("El formato es correcto");
+        } else {
+            document.write("El formato es incorrecto");
+        }
+    </script>
+</body>
+
+</html>

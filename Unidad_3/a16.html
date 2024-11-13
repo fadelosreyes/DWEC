@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Día y Número</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var entrada = prompt("Ingresa un día de la semana seguido de un número (ej: lunes 31)");
+        var regex = /^(lunes|martes|miércoles|jueves|viernes|sábado|domingo)\s(3[01]|[12][0-9]|[1-9])$/;
+        var comprobar = regex.test(entrada);
+        if (comprobar) {
+            document.write("La entrada es válida");
+        } else {
+            document.write("La entrada no es válida");
+        }
+    </script>
+</body>
+
+</html>

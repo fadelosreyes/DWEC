@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+</head>
+<body>
+    <h1>Elige una Operación</h1>
+    <button onclick="abrirOperacion('suma')">Sumar</button>
+    <button onclick="abrirOperacion('resta')">Restar</button>
+
+    <script>
+        function abrirOperacion(operacion) {
+            // Abre una nueva ventana y pasa la operación como parámetro en la URL
+            window.open(`operacion.html?operacion=${operacion}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+

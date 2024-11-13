@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operación</title>
+</head>
+<body>
+    <h1>Ingresa dos números</h1>
+    <form onsubmit="calcular(event)">
+        <label for="num1">Número 1:</label>
+        <input type="number" id="num1" required>
+        <br><br>
+        <label for="num2">Número 2:</label>
+        <input type="number" id="num2" required>
+        <br><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <script>
+        function calcular(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            const params = new URLSearchParams(window.location.search);
+            const operacion = params.get('operacion');
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let resultado;
+
+            if (operacion === 'suma') {
+                resultado = num1 + num2;
+            } else if (operacion === 'resta') {
+                resultado = num1 - num2;
+            } else {
+                resultado = 'Operación no válida';
+            }
+
+            // Abre una nueva ventana y muestra el resultado usando document.write()
+            const resultadoVentana = window.open('', '_blank');
+            resultadoVentana.document.write(`
+                <html>
+                    <head>
+                        <title>Resultado</title>
+                    </head>
+                    <body>
+                        <h1>Resultado: ${resultado}</h1>
+                    </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>

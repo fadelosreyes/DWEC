@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var f1 =  new Date();
+        var hora_actual = f1.getHours();
+        if (hora_actual >= 6 && hora_actual <= 12) {
+            document.write("buenos dias");
+        } else if (hora_actual > 12 && hora_actual <= 20) {
+            document.write("buenos tardes");
+        } else if (hora_actual > 20 && hora_actual < 6) {
+            document.write("buenos noches");
+        } 
+    </script>
+</body>
+</html>

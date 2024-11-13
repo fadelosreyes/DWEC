@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Horaria con Switch</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let zona = parseInt(prompt(`Indica el número de la zona horaria:
+            1. UTC -12 : Línea internacional de fecha del oeste
+            2. UTC -11 : Isla Midway, Samoa
+            3. UTC -10 : Hawai
+            4. UTC -9 : Alaska
+            5. UTC -8 : Hora del pacífico (USA y Canadá)
+            6. UTC -7 : Hora de las montañas rocosas (USA y Canadá)
+            7. UTC -6 : América central
+            8. UTC -5 : Hora central (USA y Canadá)
+            9. UTC -4 : Hora del Atlántico (Canadá)
+            10. UTC -3 : Buenos Aires, Asunción, Brasilia, Montevideo
+            11. UTC -2 : Atlántico central
+            12. UTC -1 : Azores
+            13. UTC 0 : Hora del meridiano de Greenwich, Londres, Dublín
+            14. UTC +1 : París, Madrid, Barcelona, Roma
+            15. UTC +2 : El Cairo
+            16. UTC +3 : Nairobi
+            17. UTC +4 : Bakú
+            18. UTC +5 : Ekaterimburgo
+            19. UTC +6 : Astana
+            20. UTC +7 : Bangkok
+            21. UTC +8 : Ulán Bator
+            22. UTC +9 : Tokio
+            23. UTC +10 : Sidney
+            24. UTC +11 : Islas Salomón
+            25. UTC +12 : Wellington
+        `));
+
+        let fechaUTC = new Date();
+
+        let diferenciaHoras;
+
+        switch (zona) {
+            case 1: diferenciaHoras = -12; break;
+            case 2: diferenciaHoras = -11; break;
+            case 3: diferenciaHoras = -10; break;
+            case 4: diferenciaHoras = -9; break;
+            case 5: diferenciaHoras = -8; break;
+            case 6: diferenciaHoras = -7; break;
+            case 7: diferenciaHoras = -6; break;
+            case 8: diferenciaHoras = -5; break;
+            case 9: diferenciaHoras = -4; break;
+            case 10: diferenciaHoras = -3; break;
+            case 11: diferenciaHoras = -2; break;
+            case 12: diferenciaHoras = -1; break;
+            case 13: diferenciaHoras = 0; break;
+            case 14: diferenciaHoras = 1; break;
+            case 15: diferenciaHoras = 2; break;
+            case 16: diferenciaHoras = 3; break;
+            case 17: diferenciaHoras = 4; break;
+            case 18: diferenciaHoras = 5; break;
+            case 19: diferenciaHoras = 6; break;
+            case 20: diferenciaHoras = 7; break;
+            case 21: diferenciaHoras = 8; break;
+            case 22: diferenciaHoras = 9; break;
+            case 23: diferenciaHoras = 10; break;
+            case 24: diferenciaHoras = 11; break;
+            case 25: diferenciaHoras = 12; break;
+        }
+
+        fechaUTC.setHours(fechaUTC.getUTCHours() + diferenciaHoras);
+
+        document.write(fechaUTC);
+    </script>
+</body>
+</html>

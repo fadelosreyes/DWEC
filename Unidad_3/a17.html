@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extraer Primeras Palabras</title>
+</head>
+
+<body>
+    <h3>Ingresa varias frases:</h3>
+    <textarea id="texto" style="width: 200px; height: 200px;" oninput="
+        var texto = this.value;
+        var primerasPalabras = texto.match(/^\w+/gm);
+        var resultado = 'Primeras palabras: ' + primerasPalabras.join(', ');
+        document.getElementById('resultado').innerHTML = resultado;
+    "></textarea>
+    <p id="resultado"></p>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Hora</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var matricula = prompt("Valida tu matricula con formato 0000 AAA");
+        var regex = /^(\d{4}) ([A-Z]{3})$/;
+        var comprobar = matricula.match(regex);
+        if (comprobar) {
+            document.write("El formato es correcto");
+        } else {
+            document.write("El formato es incorrecto");
+        }
+    </script>
+</body>
+
+</html>
