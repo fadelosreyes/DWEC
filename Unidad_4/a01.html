@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Sort</title>
+</head>
+
+<body>
+    <script>
+        var x = [5, 3, 8, 2, 1];
+        // Bucle para recorrer el array
+        for (let i = 0; i < x.length; i++) {
+            for (let j = 0; j < x.length - 1; j++) {
+                // Sustituye los elementos
+                if (x[j] > x[j + 1]) {
+                    // Si la condición es verdadera, intercambiamos los elementos
+                    var temp = x[j];
+                    x[j] = x[j + 1];
+                    x[j + 1] = temp;
+                }
+            }
+        }
+        document.write(x);
+    </script>
+</body>
+
+</html>

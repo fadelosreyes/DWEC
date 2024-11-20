@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [];
+        //Bucle para crear un array de numeros random del 0 al 1000 con un maximo de 10
+        for (let i = 0; i < 10; i++) {
+            var y = parseInt(Math.random() * 1001);
+            a.push(y);
+        }
+        a.sort((a, b) => a - b)
+        document.write(a);
+        document.write("<br>Nuevo array " + a.slice(1, 9)) //quita los elementos seleccionados
+    </script>
+</body>
+</html>
