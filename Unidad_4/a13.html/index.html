@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+</head>
+
+<body>
+    <h1>Mi Lista de Tareas</h1>
+
+    <!-- Añadir tarea -->
+    <input type="text" id="nombre" placeholder="Escribe una tarea">
+    <button id="btnAgregarTarea" onclick="añadirTareas()">Añadir Tarea</button>
+    <br>
+
+    <!-- Eliminar tarea -->
+    <input type="text" id="nombreEliminar" placeholder="Escribe la tarea a eliminar">
+    <button id="btnEliminarTarea" onclick="eliminarTarea()">Eliminar Tarea</button>
+    <br><br>
+
+    <!-- Filtrar tareas -->
+    <button onclick="filtrarTareas('completadas')">Mostrar Completadas</button>
+    <button onclick="filtrarTareas('pendientes')">Mostrar Pendientes</button>
+    <button onclick="filtrarTareas('todas')">Mostrar Todas</button>
+
+    <!-- Lista de tareas -->
+    <ul id="listaTareas"></ul>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

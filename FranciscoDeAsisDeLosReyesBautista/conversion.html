@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operación</title>
+</head>
+
+<body>
+    <p>resultado convertido: <span id="res"></span></p>
+    <p>ancho: <span id="pantallaAnchoDisponible"></span></p>
+    <p>alto: <span id="pantallaAltoDisponible"></span></p>
+    <button onclick="location.assign('principal.html')">volver</button>
+    <script>
+        document.getElementById('pantallaAnchoDisponible').innerHTML = window.innerWidth;
+        document.getElementById('pantallaAltoDisponible').innerHTML = window.innerHeight;
+        function calcular() {
+            const params = new URLSearchParams(window.location.search);
+            const origen = params.get('origen');
+            const destino = params.get('destino');
+            const cantidad = parseFloat(params.get('cantidad'));
+
+            var resultado;
+
+            if (origen === 'kg' && destino === 'libras') {
+                resultado = cantidad * 1.5;
+            } else if (origen === 'libras' && destino === 'kg') {
+                resultado = cantidad * 0.5;
+            }
+            document.getElementById('res').innerHTML = resultado;
+        }
+        calcular()
+    </script>
+</body>
+
+</html>
