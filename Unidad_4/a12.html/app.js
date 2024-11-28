@@ -22,9 +22,7 @@ function mostrarlista3() {
         }
         
     }
-    console.log(nueva_lista);
+    document.getElementById('lista').innerHTML = nueva_lista;
 }
 
-function mostrarlista() {
-    console.log(lista_compra);
-}
+const mostrarlista = () => document.getElementById('lista').innerHTML = lista_compra;

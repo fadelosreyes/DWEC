@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <h1>Ejercicio 1</h1>
+    <h2>Informacion de pantalla</h2>
+    <p>ancho total: <span id="pantallaAnchoTotal"></span></p>
+    <p>alto total: <span id="pantallaAltoTotal"></span></p>
+    <p>ancho disponible: <span id="pantallaAnchoDisponible"></span></p>
+    <p>alto disponible: <span id="pantallaAltoDisponible"></span></p>
+    <p>profundidad Pixel: <span id="profundidadPixel"></span></p>
+    <p>escala Pixel: <span id="escalaPixel"></span></p>
+    <h2>Informacion Ventana</h2>
+    <p>ancho interior de la Ventana: <span id="ventanaAnchoInterior"></span></p>
+    <p>alto interior de la ventana: <span id="ventanaAltoInterior"></span></p>
+    <p>scroll horizontal: <span id="scrollHorizontal"></span></p>
+    <p>scroll vertical: <span id="scrollVertical"></span></p>
+
+    <script>
+        document.getElementById('pantallaAnchoTotal').innerHTML = screen.width;
+        document.getElementById('pantallaAltoTotal').innerHTML = screen.height;
+        document.getElementById('pantallaAnchoDisponible').innerHTML = screen.availWidth;
+        document.getElementById('pantallaAltoDisponible').innerHTML = screen.availHeight;
+        document.getElementById('profundidadPixel').innerHTML = screen.pixelDepth;
+        document.getElementById('escalaPixel').innerHTML = window.devicePixelRatio;
+        document.getElementById('ventanaAnchoInterior').innerHTML = window.innerWidth;
+        document.getElementById('ventanaAltoInterior').innerHTML = window.innerHeight;
+        document.getElementById('scrollHorizontal').innerHTML = window.scrollX;
+        document.getElementById('scrollVertical').innerHTML = window.scrollY;
+    </script>
+</body>
+
+</html>

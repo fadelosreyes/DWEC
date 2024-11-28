@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+</head>
+
+<body>
+    <h1>Ejercicio 2</h1>
+    <h2>matematicas</h2>
+    <p>valor absoluto -42: <span id="valorAbsoluto"></span></p>
+    <p>redondeo 7.675: <span id="redondep"></span></p>
+    <p>maximo (3, 9, -7, 20): <span id="maximo"></span></p>
+    <p>minimo (3, 9, -7, 20): <span id="minimo"></span></p>
+    <h2>fechas</h2>
+    <p>dia semanan: <span id="diaSemana"></span></p>
+    <p>formato 24h: <span id="horaFormato24h"></span></p>
+    <p>minutos actuales: <span id="minurosActuales"></span></p>
+    <p>milisegundos desde 1970: <span id="milisegundos"></span></p>
+    <h2>expresion regular</h2>
+    <p>"+34 652 123 456": <span id="validoTelefono"></span></p>
+
+    <script>
+        switch (new Date().getDay()) {
+            case 1: dia = "lunes"; break;
+            case 2: dia = "martes"; break;
+            case 3: dia = "miercoles"; break;
+            case 4: dia = "jueves"; break;
+            case 5: dia = "viernes"; break;
+            case 6: dia = "sabado"; break;
+            case 7: dia = "domingo"; break;
+        }
+        var exp = /(\+34) [0-9]{3} [0-9]{3} [0-9]{3}/;
+        document.getElementById('valorAbsoluto').innerHTML = Math.abs(-42);
+        document.getElementById('redondep').innerHTML = Math.round(7.675);
+        document.getElementById('maximo').innerHTML = Math.max(3, 9, -7, 20);
+        document.getElementById('minimo').innerHTML = Math.min(3, 9, -7, 20);
+        document.getElementById('diaSemana').innerHTML = dia;
+        document.getElementById('horaFormato24h').innerHTML = new Date().getHours();
+        document.getElementById('minurosActuales').innerHTML = new Date().getMinutes();
+        document.getElementById('milisegundos').innerHTML = new Date() - new Date(1970 - 1 - 1);
+        document.getElementById('validoTelefono').innerHTML = exp.test("+34 652 123 456"); 
+    </script>
+
+</body>
+
+</html>
