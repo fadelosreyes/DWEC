@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        Crea un array de diez números aleatorios entre 0 y 10.
+    </h3>
+    <div id="1"></div>
+    <h3>
+        Devuelve un array con los valores menores a 8.
+    </h3>
+    <div id="2"></div>
+    <h3>
+        Intercambia los valores impares por la cadena “impar”.
+    </h3>
+    <div id="3"></div>
+
+    <script>
+        var a = [];
+        // genereacion del array aleatorio de 10 elementosentre 0 y 10
+        for (let i = 0; i < 10; i++) {
+            var y = parseInt(Math.random() * 11);
+            a.push(y);
+        }
+        const menoresq8 = a.filter(num => num < 8); //filtra por lo numeros que sean menno que 8
+        const impares = a.map(num => num % 2 !== 0 ? "impar" : num); //intercambia los numeros impares por la palabra impar sino son impares se quedan igual
+        document.getElementById('1').innerHTML = a;
+        document.getElementById('2').innerHTML = menoresq8;
+        document.getElementById('3').innerHTML = impares;
+    </script>
+</body>
+
+</html>

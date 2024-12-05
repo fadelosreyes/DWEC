@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>
+        Crea un vector con 5 valores numéricos.
+    </h3>
+    <div id="1"></div>
+    <h3>
+        Comprueba si son todos enteros positivos.
+    </h3>
+    <div id="2"></div>
+    <h3>
+        Devuelve en un nuevo array el triple sus valores..
+    </h3>
+    <div id="3"></div>
+    <h3>
+        Calcula el resultado de multiplicar todos los valores del nuevo array.
+    </h3>
+    <div id="4"></div>
+    <script>
+        //vector
+        var a = [10, 30,  55,  102,  2];
+        const positivos = a.every(num => Number.isInteger(num) && num > 0);//verificacion de posiitivos enteros
+        const x3 = a.map(num => num * 3); //multiplica *3 todo ek array
+        const res = a.reduce((acc, num) => acc * num, 1)//multiplicaciono acumulativa
+        document.getElementById('1').innerHTML = a;
+        document.getElementById('2').innerHTML = positivos;
+        document.getElementById('3').innerHTML = x3;
+        document.getElementById('4').innerHTML = res;
+    </script>
+</body>
+
+</html>

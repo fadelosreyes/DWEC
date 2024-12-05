@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #121212; 
+  color: #fff;
+}
+
+#contenedor-juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+#encabezado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#encabezado h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  grid-template-rows: repeat(6, 60px);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.celda {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.celda:hover {
+  transform: scale(1.1);
+  background-color: #555;
+}
+
+.celda.roja {
+  background-color: #ff1744;
+  box-shadow: 0 0 15px #ff1744, 0 0 30px #ff1744;
+}
+
+.celda.amarilla {
+  background-color: #ffee58;
+  box-shadow: 0 0 15px #ffee58, 0 0 30px #ffee58;
+}
+
+#mensaje {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+#boton-reiniciar {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #29b6f6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#boton-reiniciar:hover {
+  background-color: #0288d1;
+  transform: scale(1.05);
+}
+
+#boton-reiniciar:active {
+  transform: scale(0.95);
+}
