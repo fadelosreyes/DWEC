@@ -30,3 +30,32 @@ checkboxes.forEach(checkbox => {
         ultimoDiaSeleccionado = checkbox.value;
     });
 });
+
+function cambiarColorFondo() {
+    const colores = document.getElementsByName("color");
+    let colorSeleccionado = "";
+
+    // mira el color que esta cheked y lo mete en una varivale
+    for (let color of colores) {
+        if (color.checked) {
+            colorSeleccionado = color.value;
+            break;
+        }
+    }
+
+    // Cambiar el fondo del formulario
+    const formulario = document.getElementById("miFormulario");
+    switch (colorSeleccionado) {
+        case "rojo":
+            formulario.style.backgroundColor = "red";
+            break;
+        case "azul":
+            formulario.style.backgroundColor = "blue";
+            break;
+        case "verde":
+            formulario.style.backgroundColor = "green";
+            break;
+        default:
+            formulario.style.backgroundColor = "white";
+    }
+}

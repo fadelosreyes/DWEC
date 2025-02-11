@@ -10,3 +10,4 @@ window.onload = function (){
         alert(`has clickado con ${botones[evento.button]}`);
     });
 };
+

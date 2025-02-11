@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Interactiva</title>
+    <script src="17.js" async></script>
+    <link rel="stylesheet" href="17.css">
+
+</head>
+
+<body>
+    <h1>Encuesta Interactiva</h1>
+    <p>Completa el formulario y envía tus respuestas.</p>
+
+    <form id="formulario" onsubmit="validarFormulario(event)">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" oninput="actualizarVistaPrevia()" required><br><br>
+
+        <label for="color">Color favorito:</label>
+        <select id="color" name="color" class="color" onchange="actualizarVistaPrevia()" required>
+            <option value="" disabled selected>Elige un color</option>
+            <option value="Rojo">Rojo</option>
+            <option value="Azul">Azul</option>
+            <option value="Verde">Verde</option>
+            <option value="Amarillo">Amarillo</option>
+        </select><br>
+        <p id="mensajeColor" style="margin-top: 10px;"></p><br>
+
+        <label for="notificaciones">¿Deseas recibir notificaciones?</label>
+        <input type="checkbox" id="notificaciones" name="notificaciones" onchange="actualizarVistaPrevia()"><br><br>
+
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
+
+    <h2>Vista previa</h2>
+    <p id="previewNombre">Nombre: (pendiente)</p>
+    <p id="previewColor">Color favorito: (pendiente)</p>
+    <p id="previewNotificaciones">Recibir notificaciones: No</p>
+
+    <h2>Resumen</h2>
+    <pre id="resumen">Completa el formulario para ver el resumen aquí.</pre>
+</body>
+
+</html>
