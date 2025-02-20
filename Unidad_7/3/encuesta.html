@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+</head>
+<body>
+
+    <h1>¿Que equipo ganara la liga?</h1>
+    <form id="encuesta">
+        <label><input type="radio" name="opcion" value="1"> Real madrid</label><br>
+        <label><input type="radio" name="opcion" value="2"> Barcelona</label><br>
+        <label><input type="radio" name="opcion" value="3"> Cadiz</label><br>
+        <label><input type="radio" name="opcion" value="4"> Celta</label><br><br>
+        <button type="submit">Votar</button>
+    </form>
+
+    <h2>Resultados:</h2>
+    <div id="resultados"></div>
+
+    <script>
+        // Llama a la función para cargar los resultados al inicio
+        actualizarResultados();
+    
+        const encuesta = document.getElementById("encuesta");
+    
+        encuesta.addEventListener("submit", (event) => {
+            event.preventDefault(); // Evita que la página se recargue
+    
+            // Obtiene la opción seleccionada 
+            const opcion = document.querySelector("input[name='opcion']:checked");
+    
+            // Envia el voto al servidor y actualiza los resultados
+            fetch("encuesta_voto.php?voto=" + opcion.value)
+                .then(response => {
+                    if (!response.ok) throw new Error("Error en la respuesta del servidor.");
+                    return response.text();
+                })
+                .then(data => document.getElementById("resultados").innerHTML = data)
+                .catch(error => console.error("Error al enviar el voto:", error));        
+            });
+    
+        // Función para cargar y mostrar los resultados actuales
+        function actualizarResultados() {
+            fetch("encuesta_voto.php")
+                .then(response => {
+                if (!response.ok) throw new Error("Error al obtener los resultados.");
+                return response.text();
+            })
+        .then(data => document.getElementById("resultados").innerHTML = data)
+        .catch(error => console.error("Error al actualizar los resultados:", error));        }
+    </script>
+    
+
+</body>
+</html>

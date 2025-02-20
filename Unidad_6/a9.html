@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Usuarios</title>
+    <script src="a9.js"></script> <!-- Vincula el archivo JavaScript -->
+</head>
+<body>
+
+    <h2>Agregar Usuario</h2>
+
+    <form id="userForm">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <button type="submit">Agregar usuario</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Acciones</th> 
+            </tr>
+        </thead>
+        <tbody id="tablaUsuarios">
+        </tbody>
+    </table>
+
+</body>
+</html>
